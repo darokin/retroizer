@@ -343,7 +343,7 @@ class RenderZone {
   private float getBayer(int _ditheringType, int x, int y) {
     if (_ditheringType < 0 || _ditheringType > 2)
       return 0;
-    int bayerSize = bayer[_ditheringType][0].length;
-    return (bayer[_ditheringType][x % bayerSize][y % bayerSize] / (bayerSize * bayerSize * bayerSize * bayerSize)) * 128.0;// 255.0
+    int bayerSize = bayer[_ditheringType].length;
+    return (bayer[_ditheringType][x % bayerSize][y % bayerSize] / (bayerSize * bayerSize)) * 128.0;// 255.0
   }
 }
